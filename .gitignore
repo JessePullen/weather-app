@@ -1,0 +1,6 @@
+# **/*Zone.Identifier
+# node_modules
+# .prettierignore
+# .prettierrc
+# eslint.config.mjs
+# dist
