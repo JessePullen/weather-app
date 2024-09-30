@@ -1,6 +1,4 @@
-let location = 'new york';
-
-async function getWeatherInfo() {
+async function getWeatherInfo(location) {
 	const url = addLocation(location);
 
 	const response = await fetch(url);
