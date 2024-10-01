@@ -10,3 +10,7 @@ searchButton.addEventListener('click', (event) => {
 	getWeatherInfo(searchInput.value);
 	searchInput.value = '';
 });
+
+const weatherInfoElements = document.querySelectorAll('.weather-info');
+
+console.log(weatherInfoElements);

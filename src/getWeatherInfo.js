@@ -1,10 +1,13 @@
+import { displayWeatherInfo } from '../displayWeatherInfo';
+
 async function getWeatherInfo(location) {
 	const url = addLocation(location);
 
 	try {
 		const response = await fetch(url);
 		const data = await response.json();
-		console.log(data);
+		const sortedData = sortWeatherInfo(data);
+		displayWeatherInfo(sortedData);
 	} catch {
 		window.alert('City could not be found, please try again.');
 	}
@@ -26,6 +29,19 @@ function addLocation(location) {
 // Converts inputted string to work in url for visualcrossing weather API
 function convertLocationString(location) {
 	return location.replace(' ', '%20');
+}
+
+function sortWeatherInfo(data) {
+	const sortedData = {
+		city: data.resolvedAddress,
+		temperature: data.currentConditions.temp,
+		conditions: data.currentConditions.conditions,
+		precipitatonChance: data.currentConditions.precipprob,
+		humidity: data.currentConditions.humidity,
+		windSpeed: data.currentConditions.windspeed,
+		weatherIcon: data.currentConditions.icon,
+	};
+	return sortedData;
 }
 
 export { getWeatherInfo };
