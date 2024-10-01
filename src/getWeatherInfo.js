@@ -1,9 +1,13 @@
 async function getWeatherInfo(location) {
 	const url = addLocation(location);
 
-	const response = await fetch(url);
-	const data = await response.json();
-	console.log(data);
+	try {
+		const response = await fetch(url);
+		const data = await response.json();
+		console.log(data);
+	} catch {
+		window.alert('City could not be found, please try again.');
+	}
 }
 
 // Adds location to template url for API
