@@ -38,10 +38,15 @@ function sortWeatherInfo(data) {
 		conditions: data.currentConditions.conditions,
 		precipitatonChance: data.currentConditions.precipprob,
 		humidity: data.currentConditions.humidity,
-		windSpeed: data.currentConditions.windspeed,
+		windSpeed: convertMilesToKilometres(data.currentConditions.windspeed),
 		weatherIcon: data.currentConditions.icon,
 	};
 	return sortedData;
+}
+
+// Converts number from miles to kilometres capped at 2 decimal places
+function convertMilesToKilometres(number) {
+	return (number * 1.609344).toFixed(2);
 }
 
 export { getWeatherInfo };

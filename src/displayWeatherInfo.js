@@ -6,7 +6,7 @@ function displayWeatherInfo(data) {
 	weatherInfoElements[2].textContent = `Conditions: ${data.conditions}`;
 	weatherInfoElements[3].textContent = `Precipitation chance: ${data.precipitatonChance}`;
 	weatherInfoElements[4].textContent = `Humidity: ${data.humidity}`;
-	weatherInfoElements[5].textContent = `Wind speed: ${data.windSpeed}`;
+	weatherInfoElements[5].textContent = `Wind speed: ${data.windSpeed} km/h`;
 }
 
 export { displayWeatherInfo };

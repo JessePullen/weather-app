@@ -12,15 +12,18 @@
                 <input class="search-input" type="text" placeholder="Enter a city">
                 <button class="search-button">Search</button>
             </div>
-            <div class="temperature">
-                <label for="temperature-units">Celsius</label>
-                <input name="temperature-units" type="checkbox" checked>
-            </div>
         </form>
     </div>
     <div class="content">
         <div class="information">
-            <p class="city-title weather-info">City</p>
+            <div class="information-header">
+                <h1 class="city-title weather-info">City</h1>
+                <div class="temperature-controls">
+                    <label for="temperature-units">'F</label>
+                    <input name="temperature-units" type="checkbox" checked>
+                    <label for="temprature-units">'C</label>
+                </div>
+            </div>
             <p class='weather-info'>Temperature:</p>
             <p class='weather-info'>Conditions:</p>
             <p class='weather-info'>Precipitation chance:</p>
