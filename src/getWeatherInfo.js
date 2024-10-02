@@ -1,4 +1,4 @@
-import { displayWeatherInfo } from '../displayWeatherInfo';
+import { displayWeatherInfo } from './displayWeatherInfo';
 
 async function getWeatherInfo(location) {
 	const url = addLocation(location);
