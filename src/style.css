@@ -59,6 +59,12 @@ input[type='text'] {
 	justify-content: space-between;
 }
 
+.information-content {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto auto;
+}
+
 .temperature-label {
 	vertical-align: top;
 	font-weight: bold;

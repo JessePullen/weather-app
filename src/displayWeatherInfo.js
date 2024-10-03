@@ -8,11 +8,11 @@ function displayWeatherInfo(data) {
 	}
 
 	weatherInfoElements[0].textContent = data.city;
-	weatherInfoElements[1].textContent = `Temperature: ${data.temperature} degrees`;
-	weatherInfoElements[2].textContent = `Conditions: ${data.conditions}`;
-	weatherInfoElements[3].textContent = `Precipitation chance: ${data.precipitatonChance}%`;
-	weatherInfoElements[4].textContent = `Humidity: ${data.humidity}%`;
-	weatherInfoElements[5].textContent = `Wind speed: ${data.windSpeed} km/h`;
+	weatherInfoElements[1].textContent = data.conditions;
+	weatherInfoElements[2].textContent = data.temperature;
+	weatherInfoElements[3].textContent = data.precipitatonChance + '%';
+	weatherInfoElements[4].textContent = data.humidity + '%';
+	weatherInfoElements[5].textContent = data.windSpeed + 'km/h';
 }
 
 // Converts temperature from fahrenheit to elcius capped at 1 decimal place
