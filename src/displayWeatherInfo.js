@@ -21,4 +21,8 @@ function convertFahrenheitToCelcius(temperature) {
 	return ((temperature - 32) / 1.8).toFixed(1);
 }
 
-export { displayWeatherInfo };
+function convertCelciusToFahrenheit(temperature) {
+	return (temperature * 1.8 + 32).toFixed(1);
+}
+
+export { displayWeatherInfo, convertFahrenheitToCelcius, convertCelciusToFahrenheit };
