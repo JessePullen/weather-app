@@ -10,34 +10,46 @@
         <form>
             <div class="search-bar">
                 <input class="search-input" type="text" placeholder="Enter a city">
-                <button class="search-button">Search</button>
+                <button class="search-button">
+                    <img src="./assets/icons/search.svg">
+                </button>
             </div>
         </form>
     </div>
     <div class="content">
         <div class="information">
-            <div class="information-header">
-                <h1 class="city-title weather-info">City</h1>
+            <h1 class="city-title weather-info">City</h1>
+            <div class="information-content">
+                <p class="conditions weather-info">Conditions</p>
                 <div class="temperature-controls">
                     <label for="temperature-units" class="temperature-label">'F</label>
-                    <input class="checkbox temperature-units" name="temperature-units" id="toggle" type="checkbox" checked>
+                    <input class="checkbox temperature-units" name="temperature-units" id="toggle" type="checkbox"
+                        checked>
                     <label for="toggle" class="switch"></label>
                     <label for="temprature-units" class="temperature-label">'C</label>
                 </div>
+                <div class="weather-card">
+                    <img src="./assets/icons/thermometer-half.svg">
+                    <p class='weather-info temperature'></p>
+                    <p>Temperature</p>
+                </div>
+                <div class="weather-card">
+                    <img src="./assets/icons/umbrella-fill.svg">
+                    <p class='weather-info'></p>
+                    <p>Precipitation</p>
+                </div>
+                <div class="weather-card">
+                    <img src="./assets/icons/droplet-fill.svg">
+                    <p class='weather-info'></p>
+                    <p>Humidity</p>
+                </div>
+                <div class="weather-card">
+                    <img src="./assets/icons/wind.svg">
+                    <p class='weather-info'></p>
+                    <p>Wind Speed</p>
+                </div>
             </div>
-            <div class="information-content">
-                <p>Conditions:</p>
-                <p class='weather-info'></p>
-                <p>Temperature:</p>
-                <p class='weather-info temperature'></p>
-                <p>Precipitation chance:</p>
-                <p class='weather-info'></p>
-                <p >Humidity:</p>
-                <p class='weather-info'></p>
-                <p>Wind speed:</p>
-                <p class='weather-info'></p>
-            </div>
-        </p>
+        </div>
     </div>
 </body>
 </html>
