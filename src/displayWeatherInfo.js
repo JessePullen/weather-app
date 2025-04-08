@@ -1,6 +1,9 @@
+import { translateWeatherIconFileName } from './weatherIcons';
+
 function displayWeatherInfo(data) {
 	const weatherInfoElements = document.querySelectorAll('.weather-info');
 	const temperatureUnitsCheckbox = document.querySelector('.temperature-units');
+	const weatherImage = document.querySelector('.weather-image');
 
 	// Checked by default = celcius, unchecked = fahrenheit
 	if (temperatureUnitsCheckbox.checked) {
@@ -13,6 +16,13 @@ function displayWeatherInfo(data) {
 	weatherInfoElements[3].textContent = data.precipitatonChance + '%';
 	weatherInfoElements[4].textContent = data.humidity + '%';
 	weatherInfoElements[5].textContent = data.windSpeed + 'km/h';
+
+	// Removes old image if present
+	weatherImage.innerHTML = '';
+
+	const myIcon = new Image();
+	myIcon.src = translateWeatherIconFileName(data.weatherIcon);
+	weatherImage.appendChild(myIcon);
 }
 
 // Converts temperature from fahrenheit to elcius capped at 1 decimal place
