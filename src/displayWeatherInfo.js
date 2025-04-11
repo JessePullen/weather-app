@@ -23,6 +23,8 @@ function displayWeatherInfo(data) {
 	const myIcon = new Image();
 	myIcon.src = translateWeatherIconFileName(data.weatherIcon);
 	weatherImage.appendChild(myIcon);
+
+	setTheme(data.weatherIcon);
 }
 
 // Converts temperature from fahrenheit to elcius capped at 1 decimal place
@@ -33,6 +35,21 @@ function convertFahrenheitToCelcius(temperature) {
 
 function convertCelciusToFahrenheit(temperature) {
 	return (temperature * 1.8 + 32).toFixed(1);
+}
+
+function setTheme(weather) {
+	const body = document.querySelector('body');
+	const header = document.querySelector('.header');
+	const information = document.querySelector('.information');
+	if (weather.includes('night')) {
+		body.classList.add('night');
+		header.classList.add('night');
+		information.classList.add('night');
+	} else {
+		body.classList.remove('night');
+		header.classList.remove('night');
+		information.classList.remove('night');
+	}
 }
 
 export { displayWeatherInfo, convertFahrenheitToCelcius, convertCelciusToFahrenheit };

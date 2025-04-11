@@ -3,10 +3,30 @@
 	font-family: Roboto, sans-serif;
 }
 
+/* Day/Night Theme */
+
+:root {
+	--background: lightblue;
+	--menu: lightgrey;
+}
+
+.night {
+	--background: darkblue;
+	--menu: darkgrey;
+}
+
+body {
+	background-color: var(--background);
+}
+
+.header,
+.information {
+	background-color: var(--menu);
+}
+
 /* Header */
 
 .header {
-	background-color: lightgrey;
 	height: 15vh;
 	display: flex;
 	justify-content: center;
@@ -50,7 +70,6 @@ input[type='text']:focus {
 .information {
 	height: 350px;
 	width: 550px;
-	background-color: lightgrey;
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
@@ -107,8 +126,14 @@ h1 {
 }
 
 .weather-image {
-	height: 100px;
+	height: 70px;
 	width: 100px;
+}
+
+.conditions-card {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 /* Temperature unit switch */

@@ -39,7 +39,7 @@ function sortWeatherInfo(data) {
 		precipitatonChance: data.currentConditions.precipprob,
 		humidity: data.currentConditions.humidity,
 		windSpeed: convertMilesToKilometres(data.currentConditions.windspeed),
-		weatherIcon: data.currentConditions.icon
+		weatherIcon: data.currentConditions.icon,
 	};
 	return sortedData;
 }
