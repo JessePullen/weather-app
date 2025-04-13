@@ -6,22 +6,29 @@
 /* Day/Night Theme */
 
 :root {
-	--background: lightblue;
-	--menu: lightgrey;
+	--background: linear-gradient(#8dbde1, #2778b4);
+	--menu: #f5eded;
 }
 
 .night {
-	--background: darkblue;
-	--menu: darkgrey;
+	--background: linear-gradient(#0c1445, #4c408e);
+	--menu: #2c3c5c;
+	--text: #f5eded;
+	--icon-color: invert(100%) sepia(21%) saturate(803%) hue-rotate(291deg) brightness(97%) contrast(98%);
 }
 
 body {
-	background-color: var(--background);
+	background-image: var(--background);
+	color: var(--text);
 }
 
 .header,
 .information {
 	background-color: var(--menu);
+}
+
+.weather-icon.night {
+	filter: var(--icon-color);
 }
 
 /* Header */
@@ -162,8 +169,9 @@ h1 {
 .checkbox:checked + .switch::after {
 	left: 25px;
 }
+
 .checkbox:checked + .switch {
-	background-color: #2196f3;
+	background-image: var(--background);
 }
 
 .checkbox {

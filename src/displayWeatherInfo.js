@@ -41,14 +41,21 @@ function setTheme(weather) {
 	const body = document.querySelector('body');
 	const header = document.querySelector('.header');
 	const information = document.querySelector('.information');
+	const icons = document.querySelectorAll('.weather-icon');
 	if (weather.includes('night')) {
 		body.classList.add('night');
 		header.classList.add('night');
 		information.classList.add('night');
+		for (let icon of icons) {
+			icon.classList.add('night');
+		}
 	} else {
 		body.classList.remove('night');
 		header.classList.remove('night');
 		information.classList.remove('night');
+		for (let icon of icons) {
+			icon.classList.remove('night');
+		}
 	}
 }
 
