@@ -75,7 +75,7 @@ input[type='text']:focus {
 }
 
 .information {
-	height: 350px;
+	height: 400px;
 	width: 550px;
 	display: flex;
 	flex-direction: column;
@@ -132,8 +132,8 @@ h1 {
 	font-weight: bold;
 }
 
-.weather-image {
-	height: 70px;
+.weather-image img {
+	max-height: 100px;
 	width: 100px;
 }
 
@@ -141,6 +141,7 @@ h1 {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	gap: 10px;
 }
 
 /* Temperature unit switch */
