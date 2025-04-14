@@ -8,7 +8,7 @@ There is an icon that changes based on the weather condition, as well as a day a
 ## Skills Practiced
 
 -   Using an API to fetch weather information.
--   Asynchronous functions to implement the API.
+-   Async/Await and Try/Catch for API implementation and error handling.
 -   Dynamic icons/theme based on returned information.
 
 ## How to Run the Project
