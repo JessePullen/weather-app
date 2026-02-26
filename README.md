@@ -1,4 +1,4 @@
-# To Do List
+# Weather App
 
 ## About the Project
 
